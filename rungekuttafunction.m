@@ -1,13 +1,11 @@
-function [tn,yn] = rungekuttafunction(f,tid,y0,n)
-%% Runge-kutta
+function [tn,yn] = rungekuttafunction(f,time,y0,n)
 
-t0 = tid(1); %starttid
-tmax = tid(2); % sluttid
+t0 = time(1); %Start time
+tmax = time(2); % End time
 h = (tmax-t0)/(n-1);
 
 tn = zeros(1,n);
 yn = zeros(length(y0),n);
-
 
 t = t0;
 y = y0;
